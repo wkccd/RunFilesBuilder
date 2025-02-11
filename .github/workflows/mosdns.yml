@@ -6,7 +6,7 @@
 # Blog: wkdaily.cpolar.top
 #=================================================
 
-name: Make mosdns run files
+name: Make MosDNS run files
 
 on:
   workflow_dispatch:
