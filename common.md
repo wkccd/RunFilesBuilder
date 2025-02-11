@@ -10,7 +10,7 @@ sh xxx.run
 ```
 
 ## run 文件名说明
-- _aarch64.run 代表64位ARM的机型 比如 瑞芯微rk3568等、树莓派
+- _aarch64.run 代表64位ARM的机型 比如 瑞芯微rk3568等、树莓派等
 - _x86_64.run  代表64位通用型 比如工控机 电脑等
 
 ## 项目简介
@@ -19,7 +19,7 @@ sh xxx.run
 >> 这是一个工作流。同步各位大佬项目里最新编译的ipk文件 生成适用于iStoreOS/OpenWrt 用的run自解压包<br>
 >> 本质上是利用makeslef,将ipk和shell文件打包成自解压程序。<br>
 >> iStoreOS 可以在iStore商店手动安装<br>
->> ImmortalWrt 可下载后 使用 `sh adguardhome.run `来安装
+>> ImmortalWrt 可下载后 使用 `sh xxx.run `来安装
 > <img src="https://github.com/user-attachments/assets/3f5dabba-1efa-4e67-bf5b-86a27c114902" height=40>
 
 ## 实现原理和操作指南
@@ -28,11 +28,7 @@ sh xxx.run
 ## run 自解压包里包含什么
 - run自解压包不是加密的 任何人都可以查看解压后的内容
 - sh xx.run --target xx  该命令就是解压所有文件到xx文件夹 无任何秘密
-- AdGuardHome这个run中包含了 2个ipk 和一个AdGuardHome项目最新release的二进制可执行文件——adg内核，
+- 这个run中包含了 若干个ipk
 - 以及一个用于安装的脚本install.sh
-- 一个是 adguardhome.ipk 它是用于复制内核文件用的 也是界面的依赖文件
-- 另一个是luci-app-adguardhome.ipk 它是一款adguardhome的界面。
-- 该脚本会先安装依赖文件adguardhome.ipk,再安装luci界面,
-- 最后更新覆盖最新版二进制文件AdGuardHome https://github.com/AdguardTeam/AdGuardHome/releases
 
 
