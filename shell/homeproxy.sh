@@ -2,8 +2,8 @@
 
 # 平台基础URL
 declare -A PLATFORMS=(
-  ["x86_64"]="https://downloads.immortalwrt.org/releases/24.10.2/packages/x86_64"
-  ["aarch64_generic"]="https://downloads.immortalwrt.org/releases/24.10.2/packages/aarch64_generic"
+  ["x86_64"]="https://mirrors.sjtug.sjtu.edu.cn/immortalwrt/releases/24.10.2/packages/x86_64"
+  ["aarch64_generic"]="https://mirrors.sjtug.sjtu.edu.cn/immortalwrt/releases/24.10.2/packages/aarch64_generic"
 )
 
 # 各类包对应的目录
