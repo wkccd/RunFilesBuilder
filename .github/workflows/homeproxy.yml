@@ -67,7 +67,7 @@ jobs:
       - name: Fetch latest release details
         id: fetch_release_details
         run: |
-          version="${{ steps.pack.outputs.version }}"
+          version=${{ steps.clean_version.outputs.cleaned_version }}
           extra_content="![GitHub Downloads (all assets, specific tag)](https://img.shields.io/github/downloads/wukongdaily/RunFilesBuilder/homeproxy-$version/total?style=for-the-badge&labelColor=135ace&color=yellow)"
           sed -i "1i $extra_content" info/homeproxy.md
 
