@@ -79,8 +79,8 @@ jobs:
           commit: ${{ github.sha }}
           allowUpdates: true
           name: "homeproxy-${{ steps.clean_version.outputs.cleaned_version }}"
-          body: ${{ github.workspace }}/info/homeproxy.md
-          bodyFile: output/*.run
+          bodyFile: ${{ github.workspace }}/info/homeproxy.md
+          artifacts: output/*.run
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
