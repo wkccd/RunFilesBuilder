@@ -75,11 +75,12 @@ jobs:
       - name: 📤 上传 .run 文件到 release
         uses: ncipollo/release-action@v1
         with:
-          tag_name: "homeproxy-${{ steps.clean_version.outputs.cleaned_version }}"
+          tag: "homeproxy-${{ steps.clean_version.outputs.cleaned_version }}"
           commit: ${{ github.sha }}
+          allowUpdates: true
           name: "homeproxy-${{ steps.clean_version.outputs.cleaned_version }}"
-          body_path: ${{ github.workspace }}/info/homeproxy.md
-          files: output/*.run
+          body: ${{ github.workspace }}/info/homeproxy.md
+          bodyFile: output/*.run
           token: ${{ secrets.GITHUB_TOKEN }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
